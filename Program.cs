@@ -1,4 +1,4 @@
-﻿  string Options =    "1.Suma Y Validación numérica \n" +
+  string Options =    "1.Suma Y Validación numérica \n" +
                       "2.Calculo Y Condicionales \n" +
                       "3.Manipulación De Cadenas \n" +
                       "4.Operaciones Logicas \n" +
@@ -115,15 +115,10 @@
 
   void operations()
   {
-      int op1;
-      int op2;
-      int op3;
-      int op4;
       int num1;
       int num2;
 
-      dynamic Opt = ("Choose A Operator \n" +
-                     "+\n" +
+      dynamic Opt = ("+\n" +
                      "-\n" +
                      "*\n" +
                      "/\n");
@@ -190,4 +185,39 @@
 
 
       }
+  }
+
+  void list()
+  {
+      List<int> numbers = new List<int>();
+
+
+      string Want =
+      (
+          "What Do You Want? \n" +
+          "1.List \n" +
+          "2.Add A 5 Numbers \n" +
+          "3.The Total \n" +
+          "4.Show The Highest Number \n" +
+          "5.Show The Lowest Number "
+      );
+      
+      
+      Console.WriteLine("Enter The First Number")};
+      int number1 = int.Parse(Console.ReadLine());
+      numbers.Add(number1);
+      Console.WriteLine("Enter The First Number");
+      int number2 = int.Parse(Console.ReadLine());
+      numbers.Add(number2);
+      Console.WriteLine("Enter The First Number");
+      int number3 = int.Parse(Console.ReadLine());
+      numbers.Add(number3);
+      Console.WriteLine("Enter The First Number");
+      int number4 = int.Parse(Console.ReadLine());
+      numbers.Add(number4);
+      Console.WriteLine("Enter The First Number");
+      int number5 = int.Parse(Console.ReadLine());
+      numbers.Add(number5);
+      int match = (number1 + number2 + number3 + number4 + number5);
+      
   }
