@@ -35,14 +35,10 @@
               operations();
               break;
           case "5":
-              Console.Write("dfj");
-              Console.Clear();
-              Console.WriteLine(Options);
+              list();
               break;
           case "6":
-              Console.Write("dfj");
-              Console.Clear();
-              Console.WriteLine(Options);
+              task();
               break;
           case "10":
               Console.Write("saliendo");
@@ -187,37 +183,130 @@
       }
   }
 
-  void list()
-  {
-      List<int> numbers = new List<int>();
+  bool take = true;
+
+  
+      void list()
+      {
+          List<int> numbers = new List<int>();
 
 
-      string Want =
-      (
-          "What Do You Want? \n" +
-          "1.List \n" +
-          "2.Add A 5 Numbers \n" +
-          "3.The Total \n" +
-          "4.Show The Highest Number \n" +
-          "5.Show The Lowest Number "
-      );
-      
-      
-      Console.WriteLine("Enter The First Number")};
-      int number1 = int.Parse(Console.ReadLine());
-      numbers.Add(number1);
-      Console.WriteLine("Enter The First Number");
-      int number2 = int.Parse(Console.ReadLine());
-      numbers.Add(number2);
-      Console.WriteLine("Enter The First Number");
-      int number3 = int.Parse(Console.ReadLine());
-      numbers.Add(number3);
-      Console.WriteLine("Enter The First Number");
-      int number4 = int.Parse(Console.ReadLine());
-      numbers.Add(number4);
-      Console.WriteLine("Enter The First Number");
-      int number5 = int.Parse(Console.ReadLine());
-      numbers.Add(number5);
-      int match = (number1 + number2 + number3 + number4 + number5);
-      
+          string Want =
+          (
+              "1.List \n" +
+              "2.Add A 5 Numbers \n" +
+              "3.The Total \n" +
+              "4.Show The Highest Number \n" +
+              "5.Show The Lowest Number "
+          );
+          while (take)
+          {
+          Console.WriteLine(Want);
+          Console.WriteLine("What Do You Want??");
+          string optimum = Console.ReadLine();
+          
+          switch (optimum)
+          {
+              case "1":
+              {
+                  foreach (int numbe in numbers)
+                  {
+                      Console.WriteLine(numbe);
+                  }
+
+                  break;
+
+              }
+
+              case "2":
+              {
+                  Console.WriteLine("Enter The First Number");
+                  int number1 = int.Parse(Console.ReadLine());
+                  numbers.Add(number1);
+                  Console.WriteLine("Enter The Second Number");
+                  int number2 = int.Parse(Console.ReadLine());
+                  numbers.Add(number2);
+                  Console.WriteLine("Enter The Third Number");
+                  int number3 = int.Parse(Console.ReadLine());
+                  numbers.Add(number3);
+                  Console.WriteLine("Enter The Fourthy Number");
+                  int number4 = int.Parse(Console.ReadLine());
+                  numbers.Add(number4);
+                  Console.WriteLine("Enter The Five Number");
+                  int number5 = int.Parse(Console.ReadLine());
+                  numbers.Add(number5);
+                  break;
+              }
+
+              case "3":
+              {
+                  int match = (numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4]);
+                  Console.WriteLine(match);
+                  break;
+              }
+
+              case "4":
+              {
+                  int mayo = 0;
+                  foreach (int number in numbers)
+                  {
+                      if (number > mayo)
+                      {
+                          mayo = number;
+                      }
+                  }
+
+                  Console.WriteLine(mayo);
+                  break;
+                  // int numberMax = number.Max(n => n.number);
+              }
+
+              case "5":
+              {
+                  int mayo = 0;
+                  foreach (int number in numbers)
+                  {
+                      if (number < mayo)
+                      {
+                          mayo = number;
+                      }
+                  }
+
+                  Console.WriteLine(mayo);
+                  break;
+              }
+
+              default:
+              {
+                  Console.WriteLine("Choose A Valid Option");
+                  Console.WriteLine(Want);
+
+                  break;
+              }
+
+          }
+
+
+      }
+
+          void task()
+          {
+              List<string> tasks = new List<string>();
+
+              Console.WriteLine("Save Your Task Here");
+              string task1 = Console.ReadLine();
+              tasks.Add(task1);
+
+              string Optra =
+              (
+                  "Create Task \n" +
+                  "See Tasks W Index \n" +
+                  "Delete Task By Index"
+                  
+              );
+
+
+
+          }
+          
   }
