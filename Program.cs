@@ -1,24 +1,27 @@
-  string Options =    "1.Suma Y Validación numérica \n" +
-                      "2.Calculo Y Condicionales \n" +
-                      "3.Manipulación De Cadenas \n" +
-                      "4.Operaciones Logicas \n" +
-                      "5.Analisis Numerico \n" +
-                      "6.Gestion De Tareas \n" +
-                      "7.Arreglos Y Busqueda \n" +
-                      "8.Programación Orientada A Objetos \n" +
-                      "9.Crud De Objetos \n" +
-                      "10.Salir"; 
+using System.Linq;  
+
+string Options =    "1.Suma Y Validación numérica \n" +
+                    "2.Calculo Y Condicionales \n" +
+                    "3.Manipulación De Cadenas \n" +
+                    "4.Operaciones Logicas \n" +
+                    "5.Analisis Numerico \n" +
+                    "6.Gestion De Tareas \n" +
+                    "7.Arreglos Y Busqueda \n" +
+                    "8.Programación Orientada A Objetos \n" +
+                    "9.Crud De Objetos \n" +
+                    "10.Salir"; 
   Console.WriteLine(Options);
 
 
-  bool stop = true;
 
-  
+  bool stop = true;
+  List<int> numbers = new List<int>();
+
   while (stop)
   {
       Console.WriteLine("Choose A Option");
       string selected = Console.ReadLine();
-
+      
 
       switch (selected)
       {
@@ -35,10 +38,10 @@
               operations();
               break;
           case "5":
-              list();
+              listt();
               break;
           case "6":
-              task();
+              //task();
               break;
           case "10":
               Console.Write("saliendo");
@@ -53,6 +56,8 @@
       }
   }
 
+  
+  //Option One
   void sum()
   {
       //Declare The Variables
@@ -72,6 +77,7 @@
       
   }
 
+  //Option Two
   void grade()
   {
       double grade1;
@@ -97,6 +103,7 @@
   }
 
 
+  //Option Three
   void gret()
   {
       string name;
@@ -109,6 +116,7 @@
       Console.WriteLine("Hi,Como Estas?? {0}", greet);
   }
 
+  //Option Fourth
   void operations()
   {
       int num1;
@@ -183,14 +191,16 @@
       }
   }
 
-  bool take = true;
+
 
   
-      void list()
+  
+  //Option Five
+      void listt()
       {
-          List<int> numbers = new List<int>();
+          
 
-
+          bool take = true;
           string Want =
           (
               "1.List \n" +
@@ -200,20 +210,25 @@
               "5.Show The Lowest Number "
           );
           while (take)
-          {
+          { 
+              
+
+              Console.Clear();
           Console.WriteLine(Want);
-          Console.WriteLine("What Do You Want??");
+          Console.WriteLine("          "+"What Do You Want??");
           string optimum = Console.ReadLine();
-          
+          Console.WriteLine(optimum);
           switch (optimum)
           {
               case "1":
               {
+                  Console.WriteLine(numbers.Count());
                   foreach (int numbe in numbers)
                   {
-                      Console.WriteLine(numbe);
+                      Console.WriteLine($"Hey Bro If Don't You Look It -->{numbe}<-- Its Here");
                   }
 
+                  Console.ReadLine();
                   break;
 
               }
@@ -235,13 +250,15 @@
                   Console.WriteLine("Enter The Five Number");
                   int number5 = int.Parse(Console.ReadLine());
                   numbers.Add(number5);
+                  Console.WriteLine(numbers.Count());
                   break;
               }
 
               case "3":
               {
-                  int match = (numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4]);
-                  Console.WriteLine(match);
+                  take = true;
+                  int sumTl = numbers.Sum();
+                  Console.WriteLine($"AQUI ESTA {sumTl}");
                   break;
               }
 
@@ -280,7 +297,7 @@
               {
                   Console.WriteLine("Choose A Valid Option");
                   Console.WriteLine(Want);
-
+                  take = false;
                   break;
               }
 
@@ -289,24 +306,8 @@
 
       }
 
-          void task()
-          {
-              List<string> tasks = new List<string>();
-
-              Console.WriteLine("Save Your Task Here");
-              string task1 = Console.ReadLine();
-              tasks.Add(task1);
-
-              string Optra =
-              (
-                  "Create Task \n" +
-                  "See Tasks W Index \n" +
-                  "Delete Task By Index"
-                  
-              );
-
-
-
-          }
+          
+          //Option Six
+          //
           
   }
