@@ -16,6 +16,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
 
   bool stop = true;
   List<int> numbers = new List<int>();
+  List<string> tasked = new List<string>();
 
   while (stop)
   {
@@ -41,8 +42,12 @@ string Options =    "1.Suma Y Validación numérica \n" +
               listt();
               break;
           case "6":
-              //task();
+              task();
               break;
+          case "7":
+              arraysAndSearchs();
+              break;
+              
           case "10":
               Console.Write("saliendo");
               Console.Clear();
@@ -310,6 +315,88 @@ string Options =    "1.Suma Y Validación numérica \n" +
 
           
           //Option Six
-          //
-          
+          void task()
+          {
+              
+              string taskes = ("A.Add Task\n"+
+                               "B.Show Every\n"+
+                               "C.Remove For Index");
+
+              bool action = true;
+
+              while (action)
+              {
+                  Console.Clear();
+                  Console.WriteLine(taskes);
+                  string entry = Console.ReadLine();
+
+
+                  switch (entry)
+                  {
+                      case "A":
+                      {
+                          Console.WriteLine("Name");
+                          string name = Console.ReadLine();
+                          tasked.Add(name);
+                          break;
+                      }
+
+                      case "B":
+                      {
+                          
+
+
+
+                          break;
+                      }
+
+                      case "C":
+                      {
+                          break;
+                      }
+
+                      default:
+                      {
+                          
+                          
+                          
+                          break;
+                      }
+                      
+                      
+                      
+                      
+                      
+                  }
+
+
+
+
+
+
+
+              }
+
+            //seven option
+
+            void arraysAndSearchs()
+            {
+                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
   }
