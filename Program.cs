@@ -210,10 +210,8 @@ string Options =    "1.Suma Y Validación numérica \n" +
               "5.Show The Lowest Number "
           );
           while (take)
-          { 
-              
-
-              Console.Clear();
+          {
+          Console.Clear();
           Console.WriteLine(Want);
           Console.WriteLine("          "+"What Do You Want??");
           string optimum = Console.ReadLine();
@@ -251,6 +249,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
                   int number5 = int.Parse(Console.ReadLine());
                   numbers.Add(number5);
                   Console.WriteLine(numbers.Count());
+                  Console.ReadLine();
                   break;
               }
 
@@ -259,6 +258,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
                   take = true;
                   int sumTl = numbers.Sum();
                   Console.WriteLine($"AQUI ESTA {sumTl}");
+                  Console.ReadLine();
                   break;
               }
 
@@ -274,6 +274,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
                   }
 
                   Console.WriteLine(mayo);
+                  Console.ReadLine();
                   break;
                   // int numberMax = number.Max(n => n.number);
               }
@@ -290,6 +291,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
                   }
 
                   Console.WriteLine(mayo);
+                  Console.ReadLine();
                   break;
               }
 
