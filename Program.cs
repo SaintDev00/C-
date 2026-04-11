@@ -1,4 +1,4 @@
-using System.Linq;  
+
 
 string Options =    "1.Suma Y Validación numérica \n" +
                     "2.Calculo Y Condicionales \n" +
@@ -201,24 +201,24 @@ string Options =    "1.Suma Y Validación numérica \n" +
   
   
   //Option Five
-      void listt()
-      {
-          
+  void listt()
+  {
 
-          bool take = true;
-          string Want =
-          (
-              "1.List \n" +
-              "2.Add A 5 Numbers \n" +
-              "3.The Total \n" +
-              "4.Show The Highest Number \n" +
-              "5.Show The Lowest Number "
-          );
-          while (take)
-          {
+
+      bool take = true;
+      string Want =
+      (
+          "1.List \n" +
+          "2.Add A 5 Numbers \n" +
+          "3.The Total \n" +
+          "4.Show The Highest Number \n" +
+          "5.Show The Lowest Number "
+      );
+      while (take)
+      {
           Console.Clear();
           Console.WriteLine(Want);
-          Console.WriteLine("          "+"What Do You Want??");
+          Console.WriteLine("          " + "What Do You Want??");
           string optimum = Console.ReadLine();
           Console.WriteLine(optimum);
           switch (optimum)
@@ -312,91 +312,100 @@ string Options =    "1.Suma Y Validación numérica \n" +
 
 
       }
+  }
 
-          
-          //Option Six
-          void task()
+  //Option Six
+  void task()
+  {
+
+      string taskes = ("A. Add Task\n" +
+                       "B. Show Every\n" +
+                       "C. Show Of Index\n" +
+                       "D. Remove For Index");
+
+      bool action = true;
+
+      while (action)
+      {
+          Console.Clear();
+          Console.WriteLine(taskes);
+          string entry = Console.ReadLine().ToUpper();
+         
+
+
+          switch (entry)
           {
-              
-              string taskes = ("A.Add Task\n"+
-                               "B.Show Every\n"+
-                               "C.Remove For Index");
-
-              bool action = true;
-
-              while (action)
+              case "A":
               {
-                  Console.Clear();
-                  Console.WriteLine(taskes);
-                  string entry = Console.ReadLine();
-
-
-                  switch (entry)
-                  {
-                      case "A":
-                      {
-                          Console.WriteLine("Name");
-                          string name = Console.ReadLine();
-                          tasked.Add(name);
-                          break;
-                      }
-
-                      case "B":
-                      {
-                          
-
-
-
-                          break;
-                      }
-
-                      case "C":
-                      {
-                          break;
-                      }
-
-                      default:
-                      {
-                          
-                          
-                          
-                          break;
-                      }
-                      
-                      
-                      
-                      
-                      
-                  }
-
-
-
-
-
-
-
+                  Console.WriteLine("Name");
+                  string name = Console.ReadLine();
+                  string rest = name.ToUpper();
+                  tasked.Add(name);
+                  break;
               }
 
-            //seven option
+              case "B":
+              {
+                  foreach (string name in tasked)
+                  {
+                      Console.WriteLine(name);
+                  }
 
-            void arraysAndSearchs()
-            {
-                
-            }
+                  Console.ReadLine();
+                  break;
+              }
+
+              case "C":
+              {
+                  Console.Write("Write A Index: ");
+                  int i = int.Parse(Console.ReadLine());
+                  Console.WriteLine(i);
+                  Console.ReadLine();
+                  break;
+              }
 
 
+              case "D":
+              {
+                  Console.WriteLine("Write A Index For Remove");
+                  Console.ReadLine();
+                  for (int r = 0; r > tasked.Count; r++)
+                  {
+                      Console.WriteLine("Do you Want Remove a "+tasked[r+1]);
+                      Console.ReadLine();
+                  }
 
+                  string input = Console.ReadLine();
+                  if (int.TryParse(input, out int result))
+                  {
+                      Success: 'result' now contains 123
+                  }
+                  else
+                  {
+                      Handle failure (e.g., input was "abc")
+                  }
 
+                  
+                  name.AtRemove(r);
+                  Console.ReadLine();
+                  break;
+              }
 
-
-
-
-
-
-
-
-
-
-
+              default:
+              {
+                  action = false;
+                  Console.Clear();
+                  Console.WriteLine("Choose A Valid Option");
+                  Console.WriteLine(tasked);
+                  Console.ReadLine();
+                  break;
+              }
           }
+      }
   }
+  //seven option
+
+  void arraysAndSearchs()
+  {
+  }
+
