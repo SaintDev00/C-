@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/csharp/Escritorio/C-/C#.csproj": {}
+    "/home/saint/Escritorio/C-/C#.csproj": {}
   },
   "projects": {
-    "/home/csharp/Escritorio/C-/C#.csproj": {
+    "/home/saint/Escritorio/C-/C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/csharp/Escritorio/C-/C#.csproj",
+        "projectUniqueName": "/home/saint/Escritorio/C-/C#.csproj",
         "projectName": "C#",
-        "projectPath": "/home/csharp/Escritorio/C-/C#.csproj",
-        "packagesPath": "/home/csharp/.nuget/packages/",
-        "outputPath": "/home/csharp/Escritorio/C-/obj/",
+        "projectPath": "/home/saint/Escritorio/C-/C#.csproj",
+        "packagesPath": "/home/saint/.nuget/packages/",
+        "outputPath": "/home/saint/Escritorio/C-/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/csharp/.nuget/NuGet/NuGet.Config"
+          "/home/saint/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.115/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/saint/.dotnet/sdk/9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

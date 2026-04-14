@@ -1,15 +1,14 @@
 
 
-string Options =    "1.Suma Y Validación numérica \n" +
-                    "2.Calculo Y Condicionales \n" +
-                    "3.Manipulación De Cadenas \n" +
-                    "4.Operaciones Logicas \n" +
-                    "5.Analisis Numerico \n" +
-                    "6.Gestion De Tareas \n" +
-                    "7.Arreglos Y Busqueda \n" +
-                    "8.Programación Orientada A Objetos \n" +
-                    "9.Crud De Objetos \n" +
-                    "10.Salir"; 
+string Options = "1.Suma Y Validación numérica \n" +
+                 "2.Calculo Y Condicionales \n" +
+                 "3.Manipulación De Cadenas \n" +
+                 "4.Operaciones Logicas \n" +
+                 "5.Analisis Numerico \n" +
+                 "6.Gestion De Tareas \n" +
+                 "7.Searchs \n" +
+                 "8.Colections \n" +
+                 "9.Salir \n";
   Console.WriteLine(Options);
 
 
@@ -17,6 +16,8 @@ string Options =    "1.Suma Y Validación numérica \n" +
   bool stop = true;
   List<int> numbers = new List<int>();
   List<string> tasked = new List<string>();
+  List<string> student = new List<string>(); 
+  string[] colect = {"Madrid","Marbella","Cartagena","Paris","Novosibirsk"};
 
   while (stop)
   {
@@ -45,13 +46,14 @@ string Options =    "1.Suma Y Validación numérica \n" +
               task();
               break;
           case "7":
-              arraysAndSearchs();
+              searchs();
               break;
-              
-          case "10":
-              Console.Write("saliendo");
+          case "8":
+              colections();
+              break;
+          case "9":
               Console.Clear();
-              Console.WriteLine(Options);
+              Console.Write("Finish The System,Thanks For Using Me");
               stop = false;
               break;
           default:
@@ -321,7 +323,7 @@ string Options =    "1.Suma Y Validación numérica \n" +
       string taskes = ("A. Add Task\n" +
                        "B. Show Every\n" +
                        "C. Show Of Index\n" +
-                       "D. Remove For Index");
+                       "D. Remove For Index\n");
 
       bool action = true;
 
@@ -359,7 +361,8 @@ string Options =    "1.Suma Y Validación numérica \n" +
               {
                   Console.Write("Write A Index: ");
                   int i = int.Parse(Console.ReadLine());
-                  Console.WriteLine(i);
+                  string resultado = tasked[i];
+                  Console.WriteLine(resultado);
                   Console.ReadLine();
                   break;
               }
@@ -367,26 +370,9 @@ string Options =    "1.Suma Y Validación numérica \n" +
 
               case "D":
               {
-                  Console.WriteLine("Write A Index For Remove");
-                  Console.ReadLine();
-                  for (int r = 0; r > tasked.Count; r++)
-                  {
-                      Console.WriteLine("Do you Want Remove a "+tasked[r+1]);
-                      Console.ReadLine();
-                  }
-
-                  string input = Console.ReadLine();
-                  if (int.TryParse(input, out int result))
-                  {
-                      Success: 'result' now contains 123
-                  }
-                  else
-                  {
-                      Handle failure (e.g., input was "abc")
-                  }
-
-                  
-                  name.AtRemove(r);
+                  Console.WriteLine("Select A Index For Remove");
+                  int r = int.Parse(Console.ReadLine());
+                  tasked.RemoveAt(r);
                   Console.ReadLine();
                   break;
               }
@@ -403,9 +389,86 @@ string Options =    "1.Suma Y Validación numérica \n" +
           }
       }
   }
-  //seven option
+  //Saint Seven
 
-  void arraysAndSearchs()
+  void searchs()
   {
+      Console.WriteLine("Enter A City");
+      string city = Console.ReadLine();
+      if (colect.Contains(city))
+      {
+          Console.WriteLine("Find City");
+          Console.ReadLine();
+
+      }
+
+      else
+      {
+          Console.WriteLine("notyttttt  Find City"); 
+          Console.ReadLine();             
+      }
+      
   }
+
+//Saint Eight}
+void colections()                                                                 
+{                                                                           
+                                                                            
+    string actions = ("A. Add Student\n" +                                      
+                     "W. Show Every\n" +                                    
+                     "Z. Remove For Index\n");                              
+                                                                            
+    bool actionone = true;                                                     
+                                                                            
+    while (actionone)                                                          
+    {                                                                       
+        Console.Clear();                                                    
+        Console.WriteLine(actions);                                          
+        string entryde = Console.ReadLine().ToUpper();                        
+                                                                            
+                                                                            
+                                                                            
+        switch (entryde)                                                      
+        {                                                                   
+            case "A":                                                       
+            {                                                               
+                Console.WriteLine("New Student");                                  
+                string name = Console.ReadLine();                           
+                string rest = name.ToUpper();                               
+                student.Add(name);                                           
+                break;                                                      
+            }                                                               
+                                                                            
+            case "W":                                                       
+            {       
+                foreach (string name in student)                             
+                {                                                           
+                    Console.WriteLine(name);                                
+                }                                                           
+                                                                            
+                Console.ReadLine();                                         
+                break;                                                      
+            }                   
+            
+            case "Z":                                                       
+            {                                                               
+                Console.WriteLine("Select A Index For Remove");             
+                int r = int.Parse(Console.ReadLine());                      
+                student.RemoveAt(r);                                         
+                Console.ReadLine();                                         
+                break;                                                      
+            }                                                               
+                                                                            
+            default:                                                        
+            {                                                               
+                actionone = false;                                             
+                Console.Clear();                                            
+                Console.WriteLine("Choose A Valid Option");                 
+                Console.WriteLine(actions);                                  
+                Console.ReadLine();                                         
+                break;                                                      
+            }                                                               
+        }                                                                   
+    }                                                                       
+}                                                                           
 
